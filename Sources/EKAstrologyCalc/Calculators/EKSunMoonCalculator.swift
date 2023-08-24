@@ -214,7 +214,7 @@ public final class EKSunMoonCalculator {
         if date < Date() {
             d = toDays(date: date)
         } else {
-            d = toDays(date: Date())
+            d = toDays(date: date)
         }
         
         let s: CoordsModel = sunCoords(d: d)
