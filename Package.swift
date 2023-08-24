@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "EKAstrologyCalc",
-    platforms: [.iOS(.v11), .macOS(.v10_12)],
+    platforms: [.iOS(.v13), .macOS(.v10_12)],
     products: [
         .library(name: "EKAstrologyCalc", targets: ["EKAstrologyCalc"]),
     ],
