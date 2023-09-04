@@ -47,6 +47,11 @@ public class EKAstrologyCalc {
             EKEclipseCalculator.getEclipseFor(date: date, eclipseType: .lunar, next: true)
         ]
         
+        let solarEclipses = [
+            EKEclipseCalculator.getEclipseFor(date: date, eclipseType: .solar, next: false),
+            EKEclipseCalculator.getEclipseFor(date: date, eclipseType: .solar, next: true)
+        ]
+        
         let illumination = try? EKSunMoonCalculator(date: date, location: location).getMoonIllumination(date: date)
         let astrologyModel = EKAstrologyModel(
             date: date,
@@ -55,6 +60,7 @@ public class EKAstrologyCalc {
             phase: phase,
             moonModels: moonModels,
             lunarEclipses: eclipses,
+            solarEclipses: solarEclipses,
             illumination: illumination
         )
         return astrologyModel
